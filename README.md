@@ -20,3 +20,5 @@ Most of my math was checked by https://dinnerbone.com/minecraft/tools/coordinate
 I would also like to thank Bandwidth from SkittleMC for allowing me to open source this project as this was originally just for him.
 
 This was also my first attempt at a golang project. Constructive criticism would be much appreciated.
+
+If anyone needs any assistance using this project I would love to help. Just PM me on twitter or Spigot. @RenegadeEagle
