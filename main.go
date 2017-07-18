@@ -25,27 +25,27 @@ import "path/filepath"
 import "strings"
 import "math"
 
-//   ./WorldCompressor limit debug path
-//   ./WorldCompressor 25000 true /root/myserver/myworld/region
+//   ./wc limit debug path
+//   ./wc 25000 true /root/myserver/myworld/region
 func main() {
     if len(os.Args) < 4 {
         fmt.Println("Not enough arguments!")
         os.Exit(0)
     } else {
-        fmt.Println("Starting WorldCompressor v1.0!")
+        fmt.Println("Starting WorldTrimmer v1.0!")
         debug, _ := strconv.ParseBool(os.Args[2])
         deleteThreshhold, _ := strconv.Atoi(os.Args[1])
         path := os.Args[3]
 
         if debug {
-            fmt.Println("Starting WorldCompressor in DEBUG mode! In debug mode, the files will not actually be deleted.")
+            fmt.Println("Starting WorldTrimmer in DEBUG mode! In debug mode, the files will not actually be deleted.")
             fmt.Println("Delete Threshold is " + os.Args[1] + ", path for world files is \"" + path + "\".")
         }
 
         fmt.Println("WARNING! We are going to begin scanning the folder " + path + " and deleting any files past the threshold you have provided.")
         fmt.Println("There is NO way to recover your deleted world past this point. ")
         fmt.Println("You have ten seconds to Control-C this process before deletion begins.")
-        time.Sleep(0 * time.Second)
+        time.Sleep(10 * time.Second)
         fmt.Println("Beginning to scan files. This could take a while.")
 
         files, _ := ioutil.ReadDir(path)
